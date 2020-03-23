@@ -1,0 +1,19 @@
+language: node_js
+
+node_js:
+  - "stable"
+  - lts/*
+  - 10
+  - 8     
+
+before_install:
+  - npm i -g npm@6.13.7
+
+install:
+  - npm ci
+
+build:
+  - npm run build
+  - npm run build-ex
+test:
+  - npm test   

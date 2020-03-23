@@ -1,0 +1,43 @@
+{
+  "name": "nested-prop-paths",
+  "version": "0.5.0",
+  "homepage": "https://github.com/HBDunn/nested-prop-paths",
+  "description": "find all paths/values to a key/prop in array of objects or object",
+  "main": "./dist/nested-prop-paths.js",
+  "browser": "./lib/nested-prop-paths.js",
+  "module": "./module/nested-prop-pathsjs",
+  "scripts": {
+    "test": "BABEL_ENV=jest jest ",
+    "build": "babel ./src -o ./dist/nested-prop-paths.js --source-maps --copy-files",
+    "build-browser": "BABEL_ENV=browser babel ./src -d ./lib --source-maps --copy-files",
+    "build-module": "BABEL_ENV=module babel ./src -d ./module --source-maps --copy-files",
+    "build-ex": "babel ./example/try.js -o ./dist/try.js --source-maps --copy-files",
+    "build-all ": "npm run build && npm run build-ex && npm run build-browser && npm run build-module"
+  },
+  "keywords": [
+    "json",
+    "data",
+    "nested",
+    "paths",
+    "values",
+    "object",
+    "array"
+  ],
+  "author": "hdunn <hdunn.id@gmail.com>",
+  
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/HBDunn/nested-prop-paths"
+  },
+  
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "7.8.4",
+    "@babel/core": "7.8.7",
+    "@babel/preset-env": "7.8.7",
+    "babel-eslint": "^10.1.0",
+    "eslint": "6.8.0",
+    "eslint-plugin-jest": "^23.8.2",
+    "jest": "25.1.0"
+  }
+}

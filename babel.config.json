@@ -1,0 +1,42 @@
+{
+  "env": {
+    "development": {
+      "presets": [
+        [
+          "@babel/env",
+          {
+            "targets": {
+              "node": "current"
+            },
+            "modules":"false"
+          }
+        ]
+      ]
+    },
+    "jest": {
+      "presets": [
+        [
+          "@babel/env",
+          {
+            "targets": {
+              "node": "current"
+            },
+          }
+        ]
+      ]
+    },
+    "module": {
+      "presets": [
+        [
+          "@babel/env",
+          {
+            "targets": {
+              "node": "current"
+            },
+            "modules":"false"
+          }
+        ]
+      ]
+    }
+  }
+}

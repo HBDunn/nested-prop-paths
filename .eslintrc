@@ -1,0 +1,33 @@
+{ 
+  "env":{
+    "es6":true,
+    "node":true
+  },
+
+  "parserOptions":{
+    "parser": "babel-eslint",
+    "ecmaVersion":2018,
+    "sourceType":"module",
+  },
+
+  "extends":[eslint:recommended],
+  "rules":{
+    "no-func-assign":"off",
+	 "no-unused-vars":"off",
+	 "no-undef":"off"
+   },
+
+  "overrides": [
+    {
+      "files": [
+        "**/*.(test|spec).js",
+        "**/*.(test|spec).jsx"
+      ],
+      "env": {
+        "es6":true,
+        "jest": true
+      },
+    }
+  ]
+
+}
