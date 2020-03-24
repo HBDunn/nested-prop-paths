@@ -5,3 +5,5 @@ lib
 module
 ex*.md
 travisAPI.bash
+*.bash
+*.log
