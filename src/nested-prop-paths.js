@@ -1,27 +1,19 @@
 /**
- * nullValid helper: obj is not undefined, can be null
- * @param  {Any} obj 
- * @return {Boolean}     
- */
-function nullValid(obj){
-	return  obj!== undefined;
-}
-
-/**
- * valid: helper obj is not null or undefined
- * @param  {Any} obj 
- * @return {Boolean}
- */
-function valid(obj){
-	return obj!== null && obj!== undefined;
-}
-
+* @license nested-props-paths https://github.com/HBDunn/nested-prop-paths
+*
+* The MIT License (MIT)
+*
+* Copyright (c) 2020 HDunn.
+*
+*/
+ 
 /**
  * flattten nested array to lesser level (d)
  * @param  {Array[]} arr array of arrays to flatten
  * @param  {Number} d   level of flattening
  * @return {Array.<any>}     
  * @ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat
+ * @copyright - no copyright/attribution to HDunn for flatDeep as modified
  */
 function flatDeep(arr, d=1) {
 	return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val)
@@ -37,7 +29,8 @@ function flatDeep(arr, d=1) {
  * @param  {string} value a value in the target obj
  * @return {Array[Array.<string>]} path(s) to all values in obj as array of key/prop strings
  * 
- * @ref: https://stackoverflow.com/questions/53543303/find-a-full-object-path-to-a-given-value-with-javascript   
+ * @ref: https://stackoverflow.com/questions/53543303/find-a-full-object-path-to-a-given-value-with-javascript
+ * @copyright - no copyright/attribution to HDunn for find a modified
  */
 function find(obj, value) {
 	for(var key in obj) {
@@ -51,6 +44,24 @@ function find(obj, value) {
 			return [key];
 		}
 	}
+}
+
+/**
+ * nullValid helper: obj is not undefined, can be null
+ * @param  {Any} obj 
+ * @return {Boolean}     
+ */
+function nullValid(obj){
+	return  obj!== undefined;
+}
+
+/**
+ * valid: helper obj is not null or undefined
+ * @param  {Any} obj 
+ * @return {Boolean}
+ */
+function valid(obj){
+	return obj!== null && obj!== undefined;
 }
 
 /**
@@ -177,11 +188,11 @@ function propPaths(arrobj,prop){
 				nullValid(next)?result[(tk || k)].push(next):null;
 			}
 
-			return;
+			return undefined;
 
 		});
 
-		return;
+		return undefined;
 	}
 	/**
 	 * formatPaths walks the found paths to generate full valid key sets
