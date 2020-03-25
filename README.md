@@ -25,7 +25,7 @@ Require nested-property:
 
 ```js
 var propPaths = require("nested-prop-paths").propPaths;
-var = propPaths(data, "prop")
+var = propPaths(data, "prop");
 ```
 
 ### examples
@@ -33,7 +33,8 @@ var = propPaths(data, "prop")
 see an example output run :
 
 ```js
-node ./example/try.js 
+const runExample = require("nested-prop-paths").runExample;
+console.log(runExample()); 
 ```
 
 **Try with mocked data = obj1**
@@ -71,11 +72,11 @@ node ./example/try.js
 ```
 
 ```js
-const results = propPaths(obj1,'id')
+const results = propPaths(obj1,'id');
 ```
 **<pre>		 results</pre>**
-
 ```
+
 generated keys for prop 'id':
  [ [ 'id' ],
   [ 'type', 'id' ],
@@ -90,7 +91,7 @@ getVals yields :
  [ '100', '200', '300', '400', '500', '600' ]
 ```
 
-		**Try a sub node in mock: obj2**
+**<pre>       Try a sub node in mock: obj2</pre>**
 
 ```
 obj2 nested obj2.id.id: { id:
@@ -105,16 +106,18 @@ The nested obj propkey 'selection' exists, but we expect hasOwnProperty == false
 ```
  [ [ 'id', '0', 'selection' ], [ 'id', '1', 'selection' ] ]
 ```
-<table align="center"><tr><td align="center" width="9999">**also find**</td></tr></table>
 
-We also can 'find' 
+**<pre>       also find</pre>**
+
+We also can **'find'** a value
 
 ```js
-find(obj1,'400')
+import {propPaths, getVals, find} from "nested-prop-paths"; 
+console.log(find(obj1,'400'));
 ```
-```
-to get paths(s) for all values of '400' in obj1
 
+```
+to get paths(s) for all values of '400' in **obj1**
  [ 'validations', '0', 'selection', 'id' ]
 ```
 
