@@ -75,8 +75,8 @@ console.log(runExample());
 const results = propPaths(obj1,'id');
 ```
 **<pre>		 results</pre>**
-
 ```
+
 generated keys for prop 'id':
  [ [ 'id' ],
   [ 'type', 'id' ],
@@ -106,6 +106,7 @@ The nested obj propkey 'selection' exists, but we expect hasOwnProperty == false
 ```
  [ [ 'id', '0', 'selection' ], [ 'id', '1', 'selection' ] ]
 ```
+
 **<pre>       also find</pre>**
 
 We also can **'find'** a value
@@ -114,9 +115,9 @@ We also can **'find'** a value
 import {propPaths, getVals, find} from "nested-prop-paths"; 
 console.log(find(obj1,'400'));
 ```
+
 ```
 to get paths(s) for all values of '400' in **obj1**
-
  [ 'validations', '0', 'selection', 'id' ]
 ```
 
