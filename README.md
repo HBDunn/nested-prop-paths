@@ -1,6 +1,5 @@
 
-https://img.shields.io/npm/v/nested-prop-paths
-https://img.shields.io/npm/v/nested-prop-paths?color=blue
+![npm (.com)](https://img.shields.io/npm/v/nested-prop-paths?color=blue)
 
 ![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-green.svg)
 ![Travis (.com)](https://img.shields.io/travis/com/HBDunn/nested-prop-paths)
@@ -9,6 +8,9 @@ https://img.shields.io/npm/v/nested-prop-paths?color=blue
 [![DeepScan grade](https://deepscan.io/api/teams/8228/projects/10381/branches/143198/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=8228&pid=10381&bid=143198)
 
 # nested-prop-paths
+ Use when you **don't know** path to a key/prop. Finds **null** value prop.
+ Returns all paths, then we can filter the path we want from list of paths 
+ or paths/values arrays. 
 
   - find all nested paths in an object for a given key/prop 
   - find all paths to a given value in an object
@@ -72,9 +74,10 @@ console.log(runExample());
 ```
 
 ```js
+const propPaths = require("nested-prop-paths").propPaths;
 const results = propPaths(obj1,'id');
 ```
-**<pre>		 results</pre>**
+**<pre>		results</pre>**
 ```
 
 generated keys for prop 'id':
@@ -84,6 +87,12 @@ generated keys for prop 'id':
   [ 'validations', '0', 'selection', 'id' ],
   [ 'validations', '1', 'id' ],
   [ 'validations', '1', 'selection', 'values', 'id' ] ] 
+```
+**<pre>       get values from paths</pre>**
+
+```js
+const getVals = require("neste-prop-paths").getVals;
+console.log(getVals(result,obj1));
 ```
 
 ```
