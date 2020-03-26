@@ -14,11 +14,16 @@ install:
 test:
 - npm test
 
+after_success:
+- npm run build-all  
+
 deploy:
 
   provider : npm
   email: hdunn.id@gmail.com
   api_key:
     secure: hejzowPLPJVNar7zIt9WZja++H5ucssWs3cfu/pBKHbjzePBakgu/qxe1Nf2n68Sr4BBzY3qGp0w0fYU/DAOANgvjBQNBEusf7cYab0YnR2bIAHHTzkw74YHQeb6bpglPuZpQxO01cFZ1b6e744y+Eu2kbyAPYkNsFzWooDmP0msmkZs3M9iYdURVkolWcwkBHToQxs5U/FZccKD7fEd4xa181s6V+xiyJKvnGSkhm08JSI8YJJkecwGybvRHTvT/9d6EmSBzkI/8ASJfTzgJxZTUFDceWbbxM0OWegbb5y6Io9+mMme+6xsR2hJkZBKiwWg+nXNJ8USu6+aFBm4i6gl8tLK5bklu/QNF50cKtJ4VpB5L9TYtYozg+9oDDmbrFbZIRDJD0ovR2pAM3O4d+hvflk1/WPKzYr9sMNANsivvJx0EhfoEGXVFMq35Iy4MfRUyJQZL2fx5osuTplJP3ej3H5TgZVBDK/A2xONu2TMC2PWEEdb/haXyGtVZKqkevAO+vZbkL3L2fpmKGiOTNescZJs17fs/mAGr14V+gCTQ0HBkmoulOQZTrxkLhNjpuA9rgskzq6MTTWpVWVxpVdphZ9B5cvp1YsEeIsBOessTvy2BQ8SBbo6ScVsYfpvRwFhs855BOIfj6qhiG6dCwkTTV8VrYle8Q9q6baSgm8=
+  
+  skip_cleanup: true    
   on:
    tags: true
