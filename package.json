@@ -1,6 +1,6 @@
 {
   "name": "nested-prop-paths",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "homepage": "https://github.com/HBDunn/nested-prop-paths",
   "description": "find or check all paths/values to a key/prop in array of objects or object - when unknown full path to a prop/key",
   "main": "./dist/index.js",
