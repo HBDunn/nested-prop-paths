@@ -1,21 +1,25 @@
 {
   "name": "nested-prop-paths",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "homepage": "https://github.com/HBDunn/nested-prop-paths",
   "description": "find or check all paths/values to a key/prop in array of objects or object - when unknown full path to a prop/key",
   "main": "./dist/index.js",
   "browser": "./lib/index.js",
   "module": "./module/index.js",
+  "files":[
+   "dist/"
+  ],
   "scripts": {
     "test": "BABEL_ENV=jest jest ",
-    "build": "babel ./src -d ./dist --source-maps --copy-files",
+    "build": "babel ./src -d ./dist --source-maps",
+    "build-index": "babel ./index.js -d ./dist && babel ./index.js -d ./lib && babel ./index.js -d ./module",
     "build-browser": "BABEL_ENV=browser babel ./src -d ./lib/ --source-maps --copy-files",
     "build-module": "BABEL_ENV=module babel ./src -d ./module --source-maps --copy-files",
     "clean_dist":"rm -r ./dist &> /dev/null",
     "clean_lib":"rm -r ./lib &> /dev/null",
     "clean_module":"rm -r ./module &> /dev/null",
     "clean": " npm run clean_dist && npm run clean_lib && npm run clean_module",
-    "build-all":  "npm run clean && npm run build && npm run build-browser && npm run build-module"
+    "build-all":  "npm run clean && npm run build && npm run build-browser && npm run build-module && npm run build-index"
   },
   "pre-commit": "build-all",
   "keywords": [
