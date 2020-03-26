@@ -121,6 +121,6 @@ to get paths(s) for all values of '400' in **obj1**
  [ 'validations', '0', 'selection', 'id' ]
 ```
 
-## LICENSE
+## [LICENSE](https://github.com/HBDunn/nested-prop-paths/blob/master/LICENSE)
 
 MIT
