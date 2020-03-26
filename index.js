@@ -1,6 +1,6 @@
 "use strict";
 
-exports.propPaths = require("./src/nested-prop-paths").propPaths;
-exports.getVals = require("./src/nested-prop-paths").getVals;
-exports.find = require("./src/nested-prop-paths").find;
-exports.runExample = require("./src/example/try").runExample;
+exports.propPaths = require("./nested-prop-paths").propPaths;
+exports.getVals = require("./nested-prop-paths").getVals;
+exports.find = require("./nested-prop-paths").find;
+exports.runExample = require("./example/try").runExample;
