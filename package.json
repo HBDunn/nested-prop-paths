@@ -1,6 +1,6 @@
 {
   "name": "nested-prop-paths",
-  "version": "0.5.2",
+  "version": "0.5.4",
   "homepage": "https://github.com/HBDunn/nested-prop-paths",
   "description": "find or check all paths/values to a key/prop in array of objects or object - when unknown full path to a prop/key",
   "main": "./dist/index.js",
@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "test": "BABEL_ENV=jest jest ",
-    "build": "babel ./src -d ./dist --source-maps",
+    "build": "babel ./src -d ./dist --source-maps && cp ./test/mocks.js ./dist/example",
     "build-index": "babel ./index.js -d ./dist && babel ./index.js -d ./lib && babel ./index.js -d ./module",
     "build-browser": "BABEL_ENV=browser babel ./src -d ./lib/ --source-maps --copy-files",
     "build-module": "BABEL_ENV=module babel ./src -d ./module --source-maps --copy-files",

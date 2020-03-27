@@ -1,8 +1,8 @@
 const propPaths = require("../nested-prop-paths").propPaths;
 const getVals = require("../nested-prop-paths").getVals;
 const find = require("../nested-prop-paths").find;
-const obj1  = require("../../test/mocks").obj1;
-const obj2  = require("../../test/mocks").obj2;
+const obj1  = require("./mocks").obj1;
+const obj2  = require("./mocks").obj2;
 
 
 function runExample(){
